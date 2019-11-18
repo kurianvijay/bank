@@ -1,7 +1,7 @@
+# frozen_string_literal: true
 
 class Account
-
-attr_reader :balance
+  attr_reader :balance
 
   def initialize(name)
     @name = name
@@ -13,9 +13,10 @@ attr_reader :balance
   end
 
   def withdraw(amount)
-    raise "Cannot withraw more than avaliable balance #{@balance}" if amount > @balance
-      @balance -= amount
+    if amount > @balance
+      raise "Cannot withraw more than avaliable balance #{@balance}"
+      end
+
+    @balance -= amount
   end
-
-
 end
