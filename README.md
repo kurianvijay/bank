@@ -55,6 +55,7 @@ Create an account class that has the following methods in it:
   # withdraw(amount)
 - [ ] This method will allow the user to deduct money from the account
 - [ ] This will deduct given amount from any existing amount
+- [ ] Amount more than balance cannot be deducted - raise error
 
   # balance
 - [ ] This method should return balance, statement, with dates
