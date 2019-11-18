@@ -38,7 +38,7 @@ Using rspec - ran
  3 - As a User
   So I can see the balance in my bank Account
   I want to be able to print out my bank statement in the below format.
-  
+
   date || credit || debit || balance
   14/01/2012 || || 500.00 || 2500.00
   13/01/2012 || 2000.00 || || 3000.00
