@@ -54,22 +54,31 @@ Using rspec -
 
 # Approach/Planning
 
-Create an account class that has the following methods in it:
+#Create an account class that has the following methods in it:
+
+  #initialize
+- [ ] Initializes with 0 balance
+- [ ] Initializes with an empty transaction_history []
 
   # deposit(amount)
 - [ ] This method will allow a user the user to add in money to the account
 - [ ] This will add the sum to any existing amount in the account
+- [ ] Pushes the amount, date and balance to transaction_history
 
   # withdraw(amount)
 - [ ] This method will allow the user to deduct money from the account
 - [ ] This will deduct given amount from any existing amount
 - [ ] Amount more than balance cannot be deducted - raise error
+- [ ] Pushes the amount, date and balance to transaction_history
 
-  # transaction_history
-- [ ] This method should return date, amount transacted and balance
+  # private methods
+    #date_formatter - formats date as per requirments
+    #amount_formatter - formats amount as per requirments
 
-Create a statement class which prints out the required information
+#Create a statement class which prints out the required information
 
   # initialize
-- [ ] Initializes with an empty hash {date: Time.now, amount_transacted: , balance: Account.new.balance}
+- [ ] Initializes with an empty transactions [] that will receive Account.new.transaction_history
 
+  # print
+- [ ] A formatting method which will interpret/output the  transactions [] in a required output
