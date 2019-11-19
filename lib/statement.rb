@@ -1,10 +1,20 @@
 # frozen_string_literal: true
-
-require 'account'
-
 class Statement
-  # def initialize(amount)
-  #   @amount = amount
-  #   @statement = {date: Time.now, amount: @amount, balance: Account.new.balance }
+
+attr_reader :transaction_list
+
+  def initialize
+    @transaction_list = []
+  end
+
+  # def get_transaction_data
+  #   p @transactions.transaction_history
   # end
+
+  # def print(@transactions)
+  #
+  # end
+
+
+
 end
