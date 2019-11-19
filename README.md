@@ -54,7 +54,7 @@ Using rspec -
 
 # Approach/Planning
 
-#Create an account class that has the following methods in it:
+# Create an account class that has the following methods in it:
 
   #initialize
 - [ ] Initializes with 0 balance
@@ -75,7 +75,7 @@ Using rspec -
     #date_formatter - formats date as per requirments
     #amount_formatter - formats amount as per requirments
 
-#Create a statement class which prints out the required information
+# Create a statement class which prints out the required information
 
   # initialize
 - [ ] Initializes with an empty transactions [] that will receive Account.new.transaction_history
