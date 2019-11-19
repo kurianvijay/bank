@@ -65,5 +65,11 @@ Create an account class that has the following methods in it:
 - [ ] This will deduct given amount from any existing amount
 - [ ] Amount more than balance cannot be deducted - raise error
 
-  # balance
-- [ ] This method should return balance, statement, with dates
+  # transaction_history
+- [ ] This method should return date, amount transacted and balance
+
+Create a statement class which prints out the required information
+
+  # initialize
+- [ ] Initializes with an empty hash {date: Time.now, amount_transacted: , balance: Account.new.balance}
+
