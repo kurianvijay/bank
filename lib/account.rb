@@ -1,19 +1,21 @@
 # frozen_string_literal: true
-require_relative './statement'
+
+require_relative './display'
 
 class Account
+  attr_reader :balance, :transaction_list
 
-  attr_reader :balance, :transactions
-
-  def initialize(transactions = Statement.new)
+  def initialize(display = Display.new)
+    @display = display
     @balance = 0
-    @transactions = transactions
+    @transaction_list = []
   end
 
   def deposit(amount)
     return false if amount <= 0
+
     @balance += amount
-    transactions.transaction_list << { date: date_formatter, amount: amount_formatter(amount), balance: @balance }
+    store_transaction_list(amount)
     @balance
   end
 
@@ -24,17 +26,19 @@ class Account
       end
 
     @balance -= amount
-    transactions.transaction_list << { date: date_formatter, amount: amount_formatter(amount), balance: @balance }
+    store_transaction_list(amount)
     @balance
   end
 
-  private
-
-  def date_formatter
-    Time.now.strftime('%d/%m/%Y')
+  def store_transaction_list(amount)
+    @transaction_list.push(
+      date: Time.now.strftime('%d/%m/%Y'),
+      amount: '%.2f' % amount,
+      balance: @balance
+    )
   end
 
-  def amount_formatter(a)
-    '%.2f' % a
+  def print_transaction(transactions = @transaction_list)
+    @display.print(transactions)
   end
 end

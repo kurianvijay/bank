@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
-require 'statement'
+require 'display'
 
-describe Statement do
-
+describe Display do
   subject(:statement) { described_class.new }
   let(:account) { double 'account' }
-  let(:date_1) { double 'Time.now', strftime: '10/01/2012'}
-  let(:date_2) { double 'Time.now', strftime: '11/01/2012'}
-  let(:date_3) { double 'Time.now', strftime: '12/01/2012'}
+  # let(:date_1) { double 'Time.now', strftime: '10/01/2012'}
+  # let(:date_2) { double 'Time.now', strftime: '11/01/2012'}
+  # let(:date_3) { double 'Time.now', strftime: '12/01/2012'}
 
   # describe '#new' do
   #   it 'initializes with an empty transactions array' do
